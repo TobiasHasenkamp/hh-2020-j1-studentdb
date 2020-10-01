@@ -42,9 +42,26 @@ public class StudentDB {
         students.remove(id);
     }
 
-    private Student findById(int id) {
-        return students.get(id);
-    }
 
+    public Optional<Student> findByID(int id) {
+
+        //diesen Teil hab ich mal so umgeschrieben, wie Jan es auch geschrieben hat, der
+        //auskommentierte Teil unten ist unsere alte Version. Die Teste funktionieren nach wie vor.
+        Student newStudent = students.get(id);
+        if(students.containsKey(id)){
+            return Optional.of(newStudent);
+        }
+        else{
+            return Optional.empty();
+        }
+
+
+        /*if (newStudent == null) {
+            return Optional.empty();
+        }
+        else {
+            return Optional.of(newStudent);
+        }*/
+    }
 
 }
