@@ -7,19 +7,14 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        int variable = 1;
-        System.out.println(Optional.of(variable));
-
-        /*StudentDB studentDB = new StudentDB(
+        StudentDB studentDB = new StudentDB(
                 List.of(
                         new Student("Jane Doe", 1),
                         new Student("John Doe", 2),
                         new Student("Molly Doe", 3)
                 ));
 
-        System.out.println(studentDB.findByID(4));*/
-
+        studentDB.printIDs();
 
     }
-
 }

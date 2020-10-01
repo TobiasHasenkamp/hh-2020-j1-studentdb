@@ -64,4 +64,17 @@ public class StudentDB {
         }*/
     }
 
+    public void printIDs(){
+        students.values().forEach(student ->{
+            System.out.println(student);
+        });
+    }
+
+    //alternative Implementation directly from the key-object
+    public void printID2_other(){
+        students.forEach((id, student) ->{
+            System.out.println(student);
+        });
+    }
+
 }
